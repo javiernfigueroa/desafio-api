@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moneda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+        <h1 class="text-2xl font-semibold mb-4">Conversor de Moneda</h1>
+        <div class="mb-4">
+            <label for="cantidad" class="block text-sm font-medium text-gray-700">Cantidad de Pesos Chilenos</label>
+            <input type="number" id="cantidad" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" placeholder="Ingrese la cantidad">
+        </div>
+        <div class="mb-4">
+            <label for="moneda" class="block text-sm font-medium text-gray-700">Moneda a Convertir</label>
+            <select id="moneda" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300">
+            </select>
+        </div>
+        <button id="convertir" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">Convertir</button>
+    </div>
+    <p id="resultado" class="mt-4 text-lg font-semibold text-green-600 text-center"></p>
+
+
+    <div class="mt-8">
+        <h2 class="text-xl font-semibold mb-4">Historial de Valor</h2>
+        <div id="chart-container" class="bg-white p-4 rounded-md shadow-md">
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
